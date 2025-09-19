@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="semantic-registry" />
-        <module name="core" />
-        <module name="tests" />
-        <module name="examples" />
-        <module name="jdbc-adapter" />
-        <module name="calcite-compiler" />
-        <module name="agents" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="agents" target="17" />
+      <module name="calcite-compiler" target="17" />
+      <module name="core" target="17" />
+      <module name="examples" target="17" />
+      <module name="jdbc-adapter" target="17" />
+      <module name="NL2SQL" target="17" />
+      <module name="semantic-registry" target="17" />
+      <module name="tests" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
