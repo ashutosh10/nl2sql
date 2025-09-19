@@ -1,0 +1,31 @@
+!!com.example.nl2sql.core.semantic.SemanticModels$Registry
+entities:
+- fields:
+  - {description: null, name: id, type: bigint}
+  - {description: repository id, name: repo_id, type: bigint}
+  - {description: null, name: branch_id, type: bigint}
+  - {description: null, name: tool, type: string}
+  - {description: null, name: started_at, type: timestamp}
+  - {description: null, name: status, type: string}
+  name: deployments
+  pk: id
+  table: deployments
+- fields:
+  - {description: null, name: id, type: bigint}
+  - {description: null, name: name, type: string}
+  name: repositories
+  pk: id
+  table: repositories
+- fields:
+  - {description: null, name: id, type: bigint}
+  - {description: null, name: name, type: string}
+  - {description: null, name: repo_id, type: bigint}
+  name: branches
+  pk: id
+  table: branches
+metrics:
+- dimensions: [repositories.name, branches.name, tool, environment]
+  entity: deployments
+  expression: COUNT(*)
+  name: deployment_frequency
+  timeField: started_at

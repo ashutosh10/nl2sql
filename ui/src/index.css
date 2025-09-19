@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+@layer base {
+  input, textarea, select {
+    @apply bg-white text-gray-900 border border-gray-300 rounded;
+  }
+  input:focus, textarea:focus, select:focus {
+    @apply outline-none ring-2 ring-blue-500 border-blue-500;
+  }
+  ::placeholder {
+    @apply text-gray-400;
+  }
+}
