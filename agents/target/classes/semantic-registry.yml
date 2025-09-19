@@ -1,0 +1,33 @@
+entities:
+  - name: deployments
+    table: deployments
+    pk: id
+    fields:
+      - { name: id, type: bigint }
+      - { name: repo_id, type: bigint }
+      - { name: branch_id, type: bigint }
+      - { name: tool, type: string }
+      - { name: started_at, type: timestamp }
+      - { name: status, type: string }
+
+  - name: repositories
+    table: repositories
+    pk: id
+    fields:
+      - { name: id, type: bigint }
+      - { name: name, type: string }
+
+  - name: branches
+    table: branches
+    pk: id
+    fields:
+      - { name: id, type: bigint }
+      - { name: name, type: string }
+      - { name: repo_id, type: bigint }
+
+metrics:
+  - name: deployment_frequency
+    entity: deployments
+    expression: "COUNT(*)"
+    timeField: started_at
+    dimensions: [ "repositories.name", "branches.name", "tool", "environment" ]

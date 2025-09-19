@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.nl2sql.tests.SqlCompilerAgentTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.211 s -- in com.example.nl2sql.tests.SqlCompilerAgentTest

@@ -1,0 +1,3 @@
+com/example/nl2sql/tests/MetricResolverAgentTest.class
+com/example/nl2sql/tests/DomainClassifierAgentTest.class
+com/example/nl2sql/tests/SqlCompilerAgentTest.class
